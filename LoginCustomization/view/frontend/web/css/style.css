@@ -1,0 +1,38 @@
+.left-side{
+    cursor: pointer;
+    position: relative;
+    text-align: center;
+}
+.left-side > img {
+    width: 100%;
+    height: 100%;
+}
+.company-info {
+
+    position: absolute;
+    color: white;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.2s ease-in;
+    opacity: 1;
+}
+.logo > img {
+    width: 100%;
+}
+.logo{
+    padding-left: 24px;
+}
+.primary
+{
+    width: 80%;
+}
+.action.login.primary
+{
+    width: 100% !important;
+}

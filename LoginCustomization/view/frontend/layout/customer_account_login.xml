@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!-- ~ /** ~
+* @author Eng.Asma Hawari ~
+* @package CodaTrip_RequestBook ~
+*/ -->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="VexSolutions_LoginCustomization::css/style.css"/>
+    </head>
+    <body>
+        <referenceContainer name="customer.login.container">
+            <block name ="images" template="VexSolutions_LoginCustomization::image.phtml" before="-"/>
+            <block class="Magento\Customer\Block\Form\Login" name="customer_form_login" template="Magento_Customer::form/login.phtml">
+                <container name="form.additional.info" as="form_additional_info"/>
+            </block>
+        </referenceContainer>
+
+        <referenceBlock name="customer_form_login">
+            <action method="setTemplate">
+                <argument name="template" xsi:type="string">VexSolutions_LoginCustomization::form/login.phtml</argument>
+            </action>
+        </referenceBlock>
+        <referenceBlock name="customer.new" remove="true" />
+    </body>
+</page>
